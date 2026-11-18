@@ -1,3 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'tailwindcss';
+body{
+    font-family: Georgia, serif;
+    letter-spacing: -.01em;
+    line-height: 1.03;
+}

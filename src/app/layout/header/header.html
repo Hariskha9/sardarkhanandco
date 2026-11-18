@@ -1,0 +1,58 @@
+<!-- <header class="flex justify-between w-full items-center max-w-[85%] m-auto bg-black px-4 py-4 rounded-2xl mt-2">
+    <img src="SKC - horizontal (1).png" alt="" width="250" class="">
+    <nav>
+        <ul class="text-white text-xs flex style-none gap-4 items-center justify-end uppercase ">
+            <li class="border-b-1 border-white pb-2 hover:border-[#d9b980] hover:text-[#d9b980] cursor-pointer">Home</li>
+            <li class="border-b-1 border-white pb-2 hover:border-[#d9b980] hover:text-[#d9b980] cursor-pointer">About</li>
+            <li class="border-b-1 border-white pb-2 hover:border-[#d9b980] hover:text-[#d9b980] cursor-pointer ">HOW it Works</li>
+            <li class="border-b-1 border-white pb-2 hover:border-[#d9b980] hover:text-[#d9b980] cursor-pointer">Our advocates</li>
+            <li class="border-b-1 border-white pb-2 hover:border-[#d9b980] hover:text-[#d9b980] cursor-pointer">practice areas</li>
+        </ul>
+    </nav>
+</header> -->
+
+
+
+<header
+  class="fixed top-2 left-1/2 -translate-x-1/2 z-50
+         flex justify-between w-[85%] items-center
+         px-6 py-4 rounded-2xl
+         transition-all duration-300"
+  [ngClass]="isScrolled
+    ? 'bg-black/25 backdrop-blur-md shadow-lg'
+    : 'bg-transparent'"
+>
+
+  <img
+    src="SKC - horizontal (1).png"
+    alt="Sardar Khan & Co"
+    width="250"
+  >
+
+  <nav>
+    <ul class="text-white text-xs flex gap-4 items-center justify-end uppercase">
+
+      <li class="border-b border-white pb-2 hover:border-[#d9b980] hover:text-[#d9b980] cursor-pointer">
+        Home
+      </li>
+
+      <li class="border-b border-white pb-2 hover:border-[#d9b980] hover:text-[#d9b980] cursor-pointer">
+        About
+      </li>
+
+      <li class="border-b border-white pb-2 hover:border-[#d9b980] hover:text-[#d9b980] cursor-pointer">
+        How it Works
+      </li>
+
+      <li class="border-b border-white pb-2 hover:border-[#d9b980] hover:text-[#d9b980] cursor-pointer">
+        Our advocates
+      </li>
+
+      <li class="border-b border-white pb-2 hover:border-[#d9b980] hover:text-[#d9b980] cursor-pointer">
+        Practice areas
+      </li>
+
+    </ul>
+  </nav>
+
+</header>

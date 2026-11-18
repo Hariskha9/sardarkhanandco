@@ -1,0 +1,181 @@
+:host { display: block; width: 100%; }
+.monograph-section { position: relative; height: 500vh; height: 500svh; isolation: isolate; }
+.monograph-sticky { position: sticky; top: 0; height: 100vh; height: 100svh; }
+
+
+
+        /* =========================================================================
+           GALLERY-GRADE ARCHITECTURAL EDITORIAL FOUNDATION
+           ========================================================================= */
+        .monograph-section, .monograph-section * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .monograph-canvas {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #0B0B0B;
+            color: #F4F3EF;
+            overflow: hidden;
+            user-select: none;
+        }
+
+        /* Subtle Architectural Gallery Grid & Ambient Vignette */
+        .monograph-canvas {
+            background-color: #0B0B0B;
+            background-image:black;
+            background-size: 100% 100%, 88px 88px, 88px 88px;
+        }
+
+        /* Full-Bleed Chapter Stage Layering */
+        .chapter-layer {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            will-change: transform, opacity;
+            pointer-events: none;
+        }
+
+        .chapter-layer.is-interactive {
+            pointer-events: auto;
+        }
+
+        /* Brushed Metallic Gold Typography */
+        .gold-foil {
+            background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 46%, #B99A53 78%, #F3E5AB 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* Subtle Light Sheen Sweep for Signature */
+        @keyframes signatureSheen {
+            0% { background-position: 200% center; }
+            100% { background-position: -200% center; }
+        }
+
+        .signature-sheen {
+            background: linear-gradient(90deg, #B99A53 0%, #FFF8DC 48%, #D4AF37 54%, #B99A53 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: signatureSheen 5s linear infinite;
+        }
+
+        /* Hairline Gold Architectural Rules */
+        .gold-hairline-h {
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.65) 50%, transparent 100%);
+            transform-origin: left center;
+            will-change: transform;
+        }
+
+        .gold-hairline-solid {
+            height: 1px;
+            background: rgba(212, 175, 55, 0.35);
+            transform-origin: left center;
+            will-change: transform;
+        }
+
+        .gold-hairline-v {
+            width: 1px;
+            background: linear-gradient(180deg, transparent 0%, rgba(212, 175, 55, 0.5) 50%, transparent 100%);
+            transform-origin: top center;
+            will-change: transform;
+        }
+
+        /* Chapter 03: Sleek Editorial Practice Rows */
+        .practice-row {
+            position: relative;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.22);
+            transition: background-color 0.45s cubic-bezier(0.22, 1, 0.36, 1), padding-left 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+            cursor: pointer;
+        }
+
+        .practice-row:first-child {
+            border-top: 1px solid rgba(212, 175, 55, 0.22);
+        }
+
+        .practice-row::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, #D4AF37, #F3E5AB, transparent);
+            transform: scaleX(0);
+            transform-origin: left center;
+            transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .practice-row:hover::before,
+        .practice-row.is-expanded::before {
+            transform: scaleX(1);
+        }
+
+        .practice-row:hover,
+        .practice-row.is-expanded {
+            background: linear-gradient(90deg, rgba(0, 61, 43, 0.32) 0%, transparent 88%);
+        }
+
+        .practice-detail {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.4s ease, margin-top 0.4s ease;
+        }
+
+        .practice-row:hover .practice-detail,
+        .practice-row.is-expanded .practice-detail {
+            max-height: 96px;
+            opacity: 1;
+            margin-top: 0.55rem;
+        }
+
+        .practice-arrow {
+            transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), color 0.3s ease;
+        }
+
+        .practice-row:hover .practice-arrow,
+        .practice-row.is-expanded .practice-arrow {
+            transform: translateX(6px) rotate(-45deg);
+            color: #F3E5AB;
+        }
+
+        /* Chapter 05: Line-by-Line Editorial Illumination */
+        .covenant-line {
+            transition: color 0.2s linear, opacity 0.2s linear, transform 0.2s linear;
+            will-change: opacity, transform;
+        }
+
+        /* Minimalist Side & Bottom Chapter Tick Navigation */
+        .chapter-tick {
+            transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .chapter-tick .tick-bar {
+            width: 14px;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.28);
+            transition: width 0.35s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.35s ease;
+        }
+
+        .chapter-tick.active .tick-bar {
+            width: 34px;
+            background-color: #D4AF37;
+        }
+
+        .chapter-tick.active .tick-label {
+            color: #F3E5AB;
+            opacity: 1;
+        }
+    
+:host { display:block; width:100%; height:100dvh; }
+.monograph-canvas { height:100dvh; touch-action:pan-x pan-y; }
